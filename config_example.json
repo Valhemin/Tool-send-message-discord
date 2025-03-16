@@ -1,0 +1,29 @@
+{
+  "gemini_api_key": "Your Gemini API Key",
+  "servers": [
+      {
+          "server_id": 12345678,
+          "channel_id": 12345678,
+          "mention_id": 0
+      }
+  ],
+  "tokens": [
+      "Your token 1",
+      "Your token 2"
+  ],
+  "message_count": 10,
+  "time_delay": 5,
+  "language": "English",
+  "list_message": [
+    "Xin chào mọi người!",
+    "Có ai online không?",
+    "Chat đang im quá nhỉ",
+    "Hôm nay thời tiết thế nào?",
+    "Mọi người đang làm gì vậy?",
+    "Tuần này có dự định gì không?",
+    "Tối nay ai rảnh k, đi cf không?",
+    "Đang nghĩ xem cuối tuần làm gì đây",
+    "Hôm nay ăn gì ta?",
+    "Chơi game không mọi người ơi"
+  ]
+}

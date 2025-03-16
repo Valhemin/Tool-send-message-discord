@@ -1,0 +1,16 @@
+__pycache__/
+
+# misc
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.idea/
+*.pyc
+.vscode/*
+!.vscode/launch.json
+config.json
+proxies.txt
+proxies_die.txt
