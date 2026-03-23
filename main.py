@@ -28,8 +28,8 @@ proxies_path = os.path.join(root, "proxies.txt")
 proxies_die_path = os.path.join(root, "proxies_die.txt")
 
 count_message_generate = 50
-wait_time_min = 5
-wait_time_max = 10
+wait_time_min = 30
+wait_time_max = 40
 
 class ProxyAPI:
     def __init__(self, console):
@@ -604,14 +604,14 @@ class DiscordBot(discord.Client):
         possible_actions = []
         
         # Phân bổ trọng số cho các action
-        if self.use_gemini:
-            possible_actions.extend(["reply"] * 5)  # Reply: 50% 
+        # if self.use_gemini:
+        #     possible_actions.extend(["reply"] * 5)  # Reply: 50% 
         
-        if self.messages:
-            possible_actions.extend(["predefined"] * 3)  # Predefined: 30%
+        # if self.messages:
+        #     possible_actions.extend(["predefined"] * 3)  # Predefined: 30%
         
-        if self.use_gemini:
-            possible_actions.extend(["gemini"] * 2)  # Gemini: 20%
+        # if self.use_gemini:
+        #     possible_actions.extend(["gemini"] * 2)  # Gemini: 20%
         
         # Nếu không có action nào khả dụng
         if not possible_actions:
@@ -908,7 +908,7 @@ async def main():
         messages = [messages[0] for _ in range(len(tokens))]
     else:
         # Hỏi người dùng có muốn gửi tin nhắn ngẫu nhiên hay theo thứ tự
-        choice = input("Send messages randomly? (y/n) [Y]: ").lower().strip()
+        choice = 'y' or input("Send messages randomly? (y/n) [Y]: ").lower().strip()
         send_randomly = choice != 'n'  # Mặc định là True trừ khi người dùng nhập 'n'
         print()  # Thêm dòng trống để dễ đọc
 
